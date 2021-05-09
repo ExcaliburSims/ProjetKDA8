@@ -7,6 +7,7 @@ export const Container = styled.div`
 	max-width: 1140px;
 	margin: auto;
 	background-color:yellow
+	z-index:99;
 `;
 
 export const Navigation = styled.div`

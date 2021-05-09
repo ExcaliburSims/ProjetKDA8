@@ -1,10 +1,18 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../Components/Card/Card";
+import styled from 'styled-components';
+
+
+const SecAPI=styled.section`
+color:red;
+`;
 
 const Api = () => {
 	const [movies, setMovies] = useState([]);
 	const linkImage = "https://www.themoviedb.org/t/p/w220_and_h330_face/";
+/* 	const API_KEY='c830918bda0a4dcad664e68958cc9d71';
+	const MOVIE_WEEK='https://api.themoviedb.org/3/trending/movie/week?'; */
 
 	useEffect(() => {
 		/* Déterminez les films américains les plus rémunérateurs de 2020
@@ -22,7 +30,7 @@ const Api = () => {
 	console.log(movies);
 
 	return (
-		<section>
+		<SecAPI>
 			<div>
 				{movies.map((movie) => {
 					return (
@@ -38,7 +46,7 @@ const Api = () => {
 					);
 				})}
 			</div>
-		</section>
+		</SecAPI>
 	);
 };
 
