@@ -1,15 +1,8 @@
 import React from "react";
 import videos from "./sim.mp4";
-/* import styled from "styled-components"; */
 import "./style1.css";
+import {FaRegPlayCircle} from 'react-icons/fa'
 
-/* export const Section1 = styled.div`
-	background-color: #282c34;
-	height: 100vh;
-	border: 1px solid #282c34;
-	text-align: center;
-`;
- */
 
 function section1() {
 	return (
@@ -25,14 +18,9 @@ function section1() {
 				<h1>Heading</h1>
 				<p>Lorem ipsum...</p>
 				<button id="myBtn" onclick="myFunction()">
-					Pause
+				<FaRegPlayCircle/>
 				</button>
 			</div>
-			{/* var elem = document.getElementById("myvideo");
-            if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-            } */}
-			{/* <Section1></Section1> */}
 		</div>
 	);
 }

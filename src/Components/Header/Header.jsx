@@ -1,7 +1,7 @@
 //import "./header.css";
 //import {Navigation,Container} from "./stylehead";
 import styled from "styled-components";
-
+import { FaSearch, FaTimes } from "react-icons/fa";
 
 export const Container = styled.div`
 	max-width: 1140px;
@@ -17,7 +17,7 @@ export const Navigation = styled.div`
 	justify-content: space-between;
 	padding: 10px;
 	color: blue;
-	.logo span{
+	.logo span {
 		display: inline-block;
 		text-align: center;
 		line-height: 55px;
@@ -50,7 +50,7 @@ export const Menu = styled.div`
 		border-bottom: #f82249 2px solid;
 		color: #fff;
 	}
-	div:before {
+	div::before {
 		content: "";
 		position: absolute;
 		width: 0;
@@ -59,8 +59,29 @@ export const Menu = styled.div`
 		left: 0;
 		background-color: #f82249;
 		visibility: hidden;
-        transition: all 0.3s ease-in-out 0s;
-	  }
+		transition: all 0.3s ease-in-out 0s;
+	}
+`;
+export const SearchBar = styled.div`
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 50%;
+	padding: 0.5rem 0.8rem;
+	border-radius: 100px;
+	color: rgba(202,206,221,0.8);
+	box-shadow: 0.2rem 0.2rem 0.5rem #ccc;
+	.input {
+		margin: 0 0.5rem;
+		width: 100%;
+		border: none;
+		outline: none;
+		color: black;
+		::placeholder {
+			color: rgba(202, 206, 221, 0.8);
+		}
+	}
 `;
 
 function Header() {
@@ -72,11 +93,15 @@ function Header() {
 						<div className="logo">
 							<span>VK</span>
 						</div>
+						<SearchBar className="search-wrapper">
+							<FaTimes />
+							<input type="text" class="input" placeholder="Search...." />
+							<FaSearch />
+						</SearchBar>
 						<Menu>
 							<div class="menu-active">HOME</div>
 							<div>MOVIES</div>
 							<div>ABOUT</div>
-							<div></div>
 						</Menu>
 					</Navigation>
 				</Container>
