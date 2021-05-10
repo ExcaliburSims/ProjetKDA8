@@ -1,0 +1,29 @@
+.movie {
+    width           : 250px;
+    height: 90%;
+    margin          : 1rem;
+    background-color: #282c34;
+    color           : whitesmoke;
+    border-radius   : 3px;
+    box-shadow      : 3px 3px 3px black;
+    overflow        : hidden;
+}
+
+.movie-container {
+    display         : flex;
+    flex-wrap       : wrap;
+    max-width       : 1140px;
+    margin          : auto;
+    background-color: yellow;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    padding        : 1rem;
+}

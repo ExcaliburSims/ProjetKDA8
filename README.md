@@ -70,7 +70,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 const FEATURE="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&";
 const API_KEY="c830918bda0a4dcad664e68958cc9d71";
 const IMAGE="https://www.themoviedb.org/t/p/w220_and_h330_face/";
 const SEARCH="https://api.themoviedb.org/3/search/movie?api_key=c830918bda0a4dcad664e68958cc9d71&query=";
+
+Déterminez les films américains les plus rémunérateurs de 2020
+'https://api.themoviedb.org/3/discover/movie?api_key=c830918bda0a4dcad664e68958cc9d71&primary_release_year=2020&sort_by=revenue.desc';
+
+///////////////////////////////////////POPULAIRE
+'https://api.themoviedb.org/3/movie/popular?api_key=c830918bda0a4dcad664e68958cc9d71&page=1'
+
+/////////////////////////////////////WEEK
+'https://api.themoviedb.org/3/trending/movie/week?api_key=c830918bda0a4dcad664e68958cc9d71&language=en-US'

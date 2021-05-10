@@ -15,15 +15,13 @@ const Api = () => {
 	const MOVIE_WEEK='https://api.themoviedb.org/3/trending/movie/week?'; */
 
 	useEffect(() => {
-		/* Déterminez les films américains les plus rémunérateurs de 2020
-		'https://api.themoviedb.org/3/discover/movie?api_key=c830918bda0a4dcad664e68958cc9d71&primary_release_year=2020&sort_by=revenue.desc'
-		*/
+		
 		axios
 			.get(
-				'https://api.themoviedb.org/3/trending/movie/week?api_key=c830918bda0a4dcad664e68958cc9d71&language=en-US'
-				/*"https://api.themoviedb.org/3/movie/popular?api_key=c830918bda0a4dcad664e68958cc9d71&page=1"
-				 "https://api.themoviedb.org/3/trending/movie/week?api_key=c830918bda0a4dcad664e68958cc9d71"*/ 
-			)
+				/*'https://api.themoviedb.org/3/discover/movie?api_key=c830918bda0a4dcad664e68958cc9d71&primary_release_year=2020&sort_by=revenue.desc'
+			*/
+			"https://api.themoviedb.org/3/search/movie?api_key=c830918bda0a4dcad664e68958cc9d71&query=avengers"
+				)
 			.then((res) => setMovies(res.data.results))
 			.catch((e) => console.error(e));
 	}, []);
@@ -31,7 +29,7 @@ const Api = () => {
 
 	return (
 		<SecAPI>
-			<div>
+			<div className='movie-container'>
 				{movies.map((movie) => {
 					return (
 						<div>
