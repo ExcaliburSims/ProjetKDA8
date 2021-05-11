@@ -1,7 +1,8 @@
-//import "./header.css";
-//import {Navigation,Container} from "./stylehead";
 import styled from "styled-components";
-import { FaSearch, FaTimes } from "react-icons/fa";
+/* 
+import { useState } from "react";
+import axios from "axios";
+ */
 
 export const Container = styled.div`
 	max-width: 1140px;
@@ -62,27 +63,6 @@ export const Menu = styled.div`
 		transition: all 0.3s ease-in-out 0s;
 	}
 `;
-export const SearchBar = styled.div`
-	font-size: 1.1rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	min-width: 50%;
-	padding: 0.5rem 0.8rem;
-	border-radius: 100px;
-	color: rgba(202,206,221,0.8);
-	box-shadow: 0.2rem 0.2rem 0.5rem #ccc;
-	.input {
-		margin: 0 0.5rem;
-		width: 100%;
-		border: none;
-		outline: none;
-		color: black;
-		::placeholder {
-			color: rgba(202, 206, 221, 0.8);
-		}
-	}
-`;
 
 function Header() {
 	return (
@@ -93,11 +73,6 @@ function Header() {
 						<div className="logo">
 							<span>VK</span>
 						</div>
-						<SearchBar className="search-wrapper">
-							<FaTimes />
-							<input type="text" class="input" placeholder="Search...." />
-							<FaSearch />
-						</SearchBar>
 						<Menu>
 							<div class="menu-active">HOME</div>
 							<div>MOVIES</div>

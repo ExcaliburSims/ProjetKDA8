@@ -1,6 +1,10 @@
+body {
+    background-color: #282c34;
+}
+
 .movie {
     width           : 250px;
-    height: 90%;
+    height          : 90%;
     margin          : 1rem;
     background-color: #282c34;
     color           : whitesmoke;
@@ -10,11 +14,11 @@
 }
 
 .movie-container {
-    display         : flex;
-    flex-wrap       : wrap;
-    max-width       : 1140px;
-    margin          : auto;
-    background-color: yellow;
+    display             : flex;
+    flex-wrap           : wrap;
+    max-width           : 1140px;
+    margin              : auto;
+    /*  background-color: yellow; */
 }
 
 .movie img {
@@ -27,3 +31,70 @@
     justify-content: space-between;
     padding        : 1rem;
 }
+
+
+/* 
+
+.search-content {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    position       : relative;
+}
+
+fieldset {
+    outline : 0;
+    border  : 0;
+    position: relative;
+}
+
+#search-bar {
+    height       : 36px;
+    width        : 36px;
+    padding      : 10px;
+    font-size    : 16px;
+    color        : #666;
+    border       : 1px solid #ccc;
+    border-radius: 40px;
+    box-shadow   : 0px 0px 6px 0px rgba(204, 204, 204, 0.5);
+    transition   : all, 0.5s;
+}
+
+#search-bar:focus {
+    outline: 0;
+    width  : 280px;
+    border : 1px solid #ccc;
+} 
+
+.icons-container {
+    position: absolute;
+    top     : 10px;
+    right   : 10px;
+    width   : 36px;
+    height  : 36px;
+    cursor  : pointer;
+}
+
+#search-icon {
+    position     : relative;
+    top          : 5px;
+    left         : 8px;
+    width        : 14px;
+    height       : 14px;
+    border-radius: 7px;
+    border       : 2px solid #7759F8;
+}
+
+#search-icon:after {
+    content         : "";
+    position        : absolute;
+    bottom          : -8px;
+    right           : -2px;
+    width           : 2px;
+    border-radius   : 2px;
+    transform       : rotate(-35deg);
+    height          : 10px;
+    background-color: #7759F8;
+}
+*/
