@@ -1,8 +1,6 @@
 import styled from "styled-components";
-/* 
-import { useState } from "react";
-import axios from "axios";
- */
+import {NavLink} from 'react-router-dom'
+
 
 export const Container = styled.div`
 	max-width: 1140px;
@@ -71,12 +69,12 @@ function Header() {
 				<Container>
 					<Navigation>
 						<div className="logo">
-							<span>VK</span>
+							<NavLink to='/'><span> VK </span></NavLink>
 						</div>
 						<Menu>
-							<div class="menu-active">HOME</div>
-							<div>MOVIES</div>
-							<div>ABOUT</div>
+						<div class="menu-active"><NavLink to='/'>HOME</NavLink></div>
+						<div><NavLink to='/Movie'>MOVIES</NavLink></div>
+						<div><NavLink to='/About'>ABOUT</NavLink></div>
 						</Menu>
 					</Navigation>
 				</Container>
