@@ -1,9 +1,10 @@
 import React from "react";
+import {motion} from 'framer-motion'
 
 
 const Card = (props) => {
 	return (
-		<div className="movie">
+		<motion.div className="movie" whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.3 }} >
 			<img alt="movies" src={props.link} />
 			<div className='movie-info'>
 				<h3>{props.title}</h3>
@@ -11,7 +12,7 @@ const Card = (props) => {
                 {/*<p>{props.id}</p>
                  <p>{props.overview}</p> */}
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

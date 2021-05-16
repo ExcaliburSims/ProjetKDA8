@@ -7,31 +7,54 @@
     background-size: cover;
   }
   
-  /* Add some content at the bottom of the video/page */
   .content {
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,50%);
-    background: #282c34;
-    color: #f1f1f1;
+   /* background: #282c34;
+     color: #f1f1f1; */
   }
   .content>*{
     text-align: center;
   }
   
-  /* Style the button used to pause/play the video */
   #myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
+    width: 100px;
+    height: 100px;
     border: none;
-    background: #282c34;
-    color: #fff;
     cursor: pointer;
+    background-color: transparent;
+  border-radius: 45px;
+  }
+  #myBtn:after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.8);
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    z-index: 3;
+    opacity: 0;
+    animation: halo 1s 0.1s infinite ease-out;
+  }
+
+  @keyframes halo {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
   }
   
-  #myBtn:hover {
-    background: #ddd;
-    color: black;
-  }
+ 
