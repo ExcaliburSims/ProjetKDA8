@@ -1,12 +1,18 @@
 import styled from "styled-components";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
+export const Banner = styled.div`
+	position: fixed;
+	z-index: 99;
+	height: 10%;
+	width: 100%;
+	background:transparent;
+`;
 
 export const Container = styled.div`
 	max-width: 1140px;
 	margin: auto;
-	background-color:yellow
-	z-index:99;
 `;
 
 export const Navigation = styled.div`
@@ -15,7 +21,6 @@ export const Navigation = styled.div`
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 10px;
-	color: blue;
 	.logo span {
 		display: inline-block;
 		text-align: center;
@@ -26,58 +31,73 @@ export const Navigation = styled.div`
 		border-radius: 50%;
 		color: red;
 		border: 2px solid red;
-		font-weight: 600;
-		text-transform: uppercase;
-	}
-`;
-
-export const Menu = styled.div`
-	background-color: green;
-	display: flex;
-	position: relative;
-	justify-content: space-around;
 	padding: 20px 15px;
 	width: 30%;
 	right: 0;
-	font-size: 1.5rem;
-	color: rgba(202, 206, 221, 0.8);
-	outline: none;
-	.menu-active {
-		color: #fff;
+	font-size: 1.2rem;
+	.link {
+		display: inline-block;
+		box-sizing: border-box;
+		padding: 0.4em 0.2em;
+		color: #51c3fa;
+		text-decoration: none;
+		text-shadow: 0 1px 0 white;
+		background-color: transparent;
+		transition: background-color 0.3s ease;
 	}
-	div:hover {
-		border-bottom: #f82249 2px solid;
-		color: #fff;
+
+	.link:hover,
+	.link:focus {
+		color: #c351fa;
+		background-color: rgba(255, 255, 255, 0.4);
+		transition: background-color 0.3s ease 0.4s;
 	}
-	div::before {
-		content: "";
-		position: absolute;
-		width: 0;
-		height: 2px;
-		bottom: 0;
-		left: 0;
-		background-color: #f82249;
-		visibility: hidden;
-		transition: all 0.3s ease-in-out 0s;
+	.link:focus {
+		border-bottom: 3px solid #c351fa;
 	}
 `;
 
 function Header() {
+	const [colorChange, setColorchange] = useState(false);
+	const changeNavbarColor = () => {
+		if (window.scrollY >= 80) {
+			setColorchange(true);
+		} else {
+			setColorchange(false);
+		}
+	};
+	window.addEventListener("scroll", changeNavbarColor);
 	return (
 		<div className="header">
 			<div className="container">
-				<Container>
-					<Navigation>
-						<div className="logo">
-							<NavLink to='/'><span> VK </span></NavLink>
-						</div>
-						<Menu>
-						<div class="menu-active"><NavLink to='/'>HOME</NavLink></div>
-						<div><NavLink to='/Movie'>MOVIES</NavLink></div>
-						<div><NavLink to='/About'>ABOUT</NavLink></div>
-						</Menu>
-					</Navigation>
-				</Container>
+				<Banner className={colorChange ? "navbar colorChange" : "navbar"}>
+					<Container>
+						<Navigation>
+							<div className="logo">
+								<NavLink to="/">
+									<span> VK </span>
+								</NavLink>
+							</div>
+							<Menu>
+								<div class="current">
+									<NavLink to="/" className="link">
+										HOME
+									</NavLink>
+								</div>
+								<div>
+									<NavLink to="/Movie" className="link">
+										MOVIES
+									</NavLink>
+								</div>
+								<div>
+									<NavLink to="/About" className="link">
+										ABOUT
+									</NavLink>
+								</div>
+							</Menu>
+						</Navigation>
+					</Container>
+				</Banner>
 			</div>
 		</div>
 	);
