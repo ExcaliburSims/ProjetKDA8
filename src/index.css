@@ -1,13 +1,23 @@
 body {
-    background-color: #282c34;
+    background-color: #1c1127;
 }
+
+/*==================================================Header=============================================*/
+.navbar{
+    background-color: transparent;
+}
+  
+.navbar.colorChange{
+    background-color: #000;
+}
+/*=====================================================================================================*/
 
 .movie {
     width           : 250px;
     height          : 90%;
     margin          : 1rem;
     background-color: #282c34;
-    color           : whitesmoke;
+    color           : cyan;
     border-radius   : 3px;
     box-shadow      : 3px 3px 3px black;
     overflow        : hidden;
@@ -18,7 +28,6 @@ body {
     flex-wrap           : wrap;
     max-width           : 1140px;
     margin              : auto;
-    /*  background-color: yellow; */
 }
 
 .movie img {
@@ -99,3 +108,4 @@ body {
       transform: scale(0);
     }
   }
+  /*================================================================================*/

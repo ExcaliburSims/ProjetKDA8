@@ -2,7 +2,6 @@ import { React, useEffect, useState } from "react";
 import axios from "axios";
 import Card from '../Card/Card';
 import styled from "styled-components";
-import { FaSearch /* , FaTimes */ } from "react-icons/fa";
 
 
 export const SearchBloc=styled.div`

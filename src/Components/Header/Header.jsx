@@ -7,7 +7,7 @@ export const Banner = styled.div`
 	z-index: 99;
 	height: 10%;
 	width: 100%;
-	background:transparent;
+	background: transparent;
 `;
 
 export const Container = styled.div`
@@ -31,6 +31,12 @@ export const Navigation = styled.div`
 		border-radius: 50%;
 		color: red;
 		border: 2px solid red;
+	
+`;
+export const Menu = styled.div`
+	display: flex;
+	position: relative;
+	justify-content: space-around;
 	padding: 20px 15px;
 	width: 30%;
 	right: 0;

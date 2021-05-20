@@ -80,7 +80,7 @@ const IMAGE="https://www.themoviedb.org/t/p/w220_and_h330_face/";
 const SEARCH="https://api.themoviedb.org/3/search/movie?api_key=c830918bda0a4dcad664e68958cc9d71&query=";
 
 Déterminez les films américains les plus rémunérateurs de 2020
-'https://api.themoviedb.org/3/discover/movie?api_key=c830918bda0a4dcad664e68958cc9d71&primary_release_year=2020&sort_by=revenue.desc';
+'https://api.themoviedb.org/3/discover/movie?api_key=c830918bda0a4dcad664e68958cc9d71&primary_release_year=2021&sort_by=revenue.desc';
 
 ///////////////////////////////////////POPULAIRE
 'https://api.themoviedb.org/3/movie/popular?api_key=c830918bda0a4dcad664e68958cc9d71&page=1'
