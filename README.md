@@ -69,8 +69,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
-
 /////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -87,3 +85,6 @@ Déterminez les films américains les plus rémunérateurs de 2020
 
 /////////////////////////////////////WEEK
 'https://api.themoviedb.org/3/trending/movie/week?api_key=c830918bda0a4dcad664e68958cc9d71&language=en-US'
+
+///////////////////////////////////////////////////HORROR
+https://api.themoviedb.org/3/discover/movie?api_key=c830918bda0a4dcad664e68958cc9d71&with_genres=27

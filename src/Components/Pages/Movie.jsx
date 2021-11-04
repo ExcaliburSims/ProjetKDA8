@@ -1,20 +1,19 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
-import Card from '../Card/Card';
+import Card from "../Card/Card";
 import styled from "styled-components";
 
-
-export const SearchBloc=styled.div`
-width:25vw;
-position:relative;
-left:55%;
-`
+export const SearchBloc = styled.div`
+	width: 25vw;
+	position: relative;
+	left: 55%;
+`;
 export const SearchBar = styled.form`
 	font-size: 1.1rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color:  #282c34;
+	background-color: #282c34;
 	padding: 0.5rem 0.8rem;
 	border-radius: 100px;
 	color: rgba(202, 206, 221, 0.8);
@@ -24,7 +23,7 @@ export const SearchBar = styled.form`
 		width: 30%;
 		border: none;
 		outline: none;
-		background-color:  #282c34;
+		background-color: #282c34;
 		color: rgba(202, 206, 221, 0.8);
 		::placeholder {
 			color: rgba(202, 206, 221, 0.8);
@@ -40,7 +39,7 @@ const Movie = () => {
 	useEffect(() => {
 		axios
 			.get(
-				'https://api.themoviedb.org/3/movie/popular?api_key=c830918bda0a4dcad664e68958cc9d71&page=1'
+				"https://api.themoviedb.org/3/movie/popular?api_key=c830918bda0a4dcad664e68958cc9d71&page=1"
 			)
 			.then((res) => setMovies(res.data.results))
 			.catch((e) => console.error(e));
